@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../images/form-validator-image-bg.jpg);
+  backdrop-filter: blur(8px);
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  padding: 0.8rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 40rem;
+  background: white;
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+h2 {
+  text-align: center;
+  color: #343a40;
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+.form-control .state {
+  color: #c9184a;
+  font-size: 1.2rem;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+.form-control.error .state {
+  visibility: visible;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+.form-control input {
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #6c757d;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-control input:focus {
+  box-shadow: 0 0 0 2px #2d00f7;
+  border: 1px solid transparent;
+}
+
+.form-control.success input {
+  border: 2px solid #57cc99;
+}
+
+.form-control.error input {
+  border: 2px solid #c9184a;
+}
+
+.form button {
+  background: #2d00f7;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: #db00b6;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  label {
+    font-size: 1.6rem;
+  }
+}
